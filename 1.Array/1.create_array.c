@@ -1,9 +1,10 @@
 /*
- * This program creates a dynamic integer array using struct. 
+ * This program creates a dynamic integer array using a struct, fills the array by taking input from 
+ * the user and displays the elements of the array to the screen. 
  * Array struct contains three properties:
- * 1) int *A:	A pointer that points to dynamic memory allocated in heap for the array.
- * 2) int size: Represents total capacity of elements this array can hold.
- * 3) int length: Represents filled capacity.
+ * 1) int *A:		A pointer that points to dynamic memory allocated in heap for the array.
+ * 2) int size: 	Represents total capacity of elements this array can hold.
+ * 3) int length: 	Represents filled capacity.
  * */
 
 # include <stdio.h>
@@ -14,7 +15,6 @@ struct Array {
     int size;
     int length;
 };
-
 
 int main(){
     struct Array arr;
@@ -33,8 +33,10 @@ int main(){
     for(int i = 0; i < arr.size; i++){
         printf("%d ", arr.A[i]);
     }
+
     printf("\n");
     free(arr.A);
+
     return 0;  
 }
 
